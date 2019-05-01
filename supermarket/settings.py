@@ -40,7 +40,7 @@ ALLOWED_HOSTS = [
     'localhost',
     '127.0.0.1',
     '.supermarket.ga',
-    '138.197.185.217',
+    '157.230.24.91',
 ]
 
 
