@@ -6,8 +6,6 @@ decorator==4.3.2
 Django==2.1.7
 django-environ==0.4.5
 easy-thumbnails==2.6
-gevent
-gunicorn
 ipython==7.2.0
 ipython-genutils==0.2.0
 jedi==0.13.2

@@ -1,0 +1,58 @@
+version: '3'
+
+services:
+  nginx:
+    # при падении будет стараться подняться
+    restart: always
+    # только свежий nginx
+    image: nginx:latest
+    # слушает порт 8080
+    expose:
+      - 8080
+    # мапаем порт 80 на его 8080. Тогда сайт будет доступен по адресу localhost. Убедись, что порт у тебя не занят.
+    ports:
+      - "80:8080"
+    # монтируем только те директории, в которых лежит статика, т.к. nginx с динамикой не будет работать. Также директорию с логами и файл настройки, который мы подготовили.
+    volumes:
+      - ./static:/srv/www/supermarket/static
+      - ./media:/srv/www/supermarket/media
+      - ./logs:/srv/www/supermarket/logs
+      - ./nginx:/etc/nginx/conf.d
+    # и nginx зависит от контейнера python. Т.е. python должен быть запущен первым
+    depends_on:
+      - app
+
+  db:
+    image: postgres:latest
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    ports:
+      - 5432
+
+  redis:
+    image: redis:alpine
+
+  app:
+    build: .
+    volumes:
+      - .:/app
+    command: gunicorn -c gunicorn.py supermarket.wsgi -w 2 -b :8000
+    ports:
+      - "8000:8000"
+    depends_on:
+      - db
+      - redis
+
+  celery:
+    build: .
+    command: celery -A supermarket worker -l info
+    volumes:
+      - .:/app
+    depends_on:
+      - db
+      - redis
+
+volumes:
+    pgdata:
+        driver: local
+
