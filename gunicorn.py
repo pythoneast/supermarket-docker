@@ -16,4 +16,4 @@ env = {
 }
 
 reload = True
-name = 'Project_name'
+name = 'supermarket'
