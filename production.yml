@@ -34,8 +34,7 @@ services:
       - .:/app
       - static:/app/static_root
       - media:/app/media
-    command:
-      - run.sh
+    command: gunicorn -c gunicorn.py supermarket.wsgi -w 2 -b :8000
     ports:
       - "8000:8000"
     depends_on:

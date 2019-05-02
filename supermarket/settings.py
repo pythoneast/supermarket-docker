@@ -22,7 +22,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 env = environ.Env(
     SECRET_KEY=str,
-    DEBUG=(bool, True),
+    DEBUG=(bool, False),
 )
 
 environ.Env.read_env()
