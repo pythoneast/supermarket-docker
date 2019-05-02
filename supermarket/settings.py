@@ -39,7 +39,7 @@ DEBUG = env('DEBUG', default=True)
 ALLOWED_HOSTS = [
     'localhost',
     '127.0.0.1',
-    '.supermarket.ga',
+    '.superduken.ml',
     '157.230.24.91',
 ]
 
