@@ -34,7 +34,11 @@ services:
       - .:/app
       - static:/app/static_root
       - media:/app/media
-    command: gunicorn -c gunicorn.py supermarket.wsgi -w 2 -b :8000
+    command: >
+        bash -c "python3.6 manage.py migrate
+        && python3.6 manage.py collectstatic --noinput
+        && gunicorn -c gunicorn.py supermarket.wsgi -w 2 -b :8000"
+
     ports:
       - "8000:8000"
     depends_on:
