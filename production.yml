@@ -37,6 +37,7 @@ services:
     command: >
         bash -c "python3.6 manage.py migrate
         && python3.6 manage.py collectstatic --noinput
+        && python3.6 manage.py compilemessages
         && gunicorn -c gunicorn.py supermarket.wsgi -w 2 -b :8000"
 
     ports:
