@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-04-03 14:07+0000\n"
+"POT-Creation-Date: 2019-05-12 13:03+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -21,11 +21,19 @@ msgstr ""
 msgid "Order successfully completed!"
 msgstr "Буйрутманыз ийгиликтүү аяктады"
 
+#: templates/account/login.html:4 templates/products/delete_product.html:3
+msgid "Login Page"
+msgstr "Кируу"
+
+#: templates/account/register.html:4
+msgid "Register Page"
+msgstr "Каттоо"
+
 #: templates/base.html:25
 msgid "Main Page"
 msgstr "Баш бет"
 
-#: templates/base.html:28
+#: templates/base.html:28 templates/contacts.html:9
 msgid "Contacts"
 msgstr "Байланышуу"
 
@@ -48,3 +56,190 @@ msgstr "Чыгуу"
 #: templates/cart/cart_page.html:59
 msgid "Product name"
 msgstr "Продукттун аты"
+
+#: templates/cart/cart_page.html:60
+msgid "Price"
+msgstr "Баасы"
+
+#: templates/cart/cart_page.html:61 templates/products/delete_product.html:18
+#: templates/snippets/cart-update.html:7 templates/snippets/cart-update.html:20
+msgid "Delete"
+msgstr "Жок кылуу"
+
+#: templates/cart/cart_page.html:77
+msgid "Subtotal: "
+msgstr "Арадагы: "
+
+#: templates/cart/cart_page.html:83
+msgid "Total: "
+msgstr "Жалпы: "
+
+#: templates/cart/cart_page.html:91 templates/orders/checkout.html:34
+msgid "Checkout"
+msgstr "Заказды алуу"
+
+#: templates/contacts.html:26
+msgid "Send"
+msgstr "жиберуу"
+
+#: templates/includes/cart.html:12 templates/index.html:120
+#: templates/products/detail-cbv.html:21
+#: templates/products/detail-slug-cbv.html:43 templates/products/detail.html:20
+#: templates/products/list.html:22
+msgid "No photo"
+msgstr "Суроттор жок"
+
+#: templates/includes/form.html:19
+msgid "Submit"
+msgstr "Алуу"
+
+#: templates/index.html:18
+msgid "No catigories "
+msgstr "Категориялар жок"
+
+#: templates/index.html:125
+msgid "Watch"
+msgstr "Коруу"
+
+#: templates/index.html:130
+msgid "No products"
+msgstr "Буюмдар жок"
+
+#: templates/orders/checkout.html:25
+msgid "Shipping Address"
+msgstr "Жеткирүү дареги"
+
+#: templates/orders/checkout.html:35
+msgid "Shipping Address:"
+msgstr "Жеткирүү дареги: "
+
+#: templates/orders/checkout.html:36
+msgid "Delivery Amount:"
+msgstr "Жеткирүү суммасы:"
+
+#: templates/orders/checkout.html:37
+msgid "Amount:"
+msgstr "Суммасы:"
+
+#: templates/orders/checkout.html:45
+msgid "Buy"
+msgstr "Сатып алуу"
+
+#: templates/orders/success.html:7
+msgid "The purchase was successfully completed!"
+msgstr "Буйрутманыз ийгиликтүү аяктады"
+
+#: templates/orders/success.html:8
+msgid "Back to Main Page"
+msgstr "Баш бетке кайрылуу"
+
+#: templates/products/create_product.html:4
+#: templates/products/create_product.html:10
+#: templates/products/create_product.html:43
+msgid "Create Product"
+msgstr "Буюм тузуу "
+
+#: templates/products/detail-cbv.html:4 templates/products/detail-cbv.html:10
+#: templates/products/detail-slug-cbv.html:4
+#: templates/products/detail-slug-cbv.html:10 templates/products/detail.html:3
+#: templates/products/detail.html:9
+msgid "Products detail"
+msgstr "Буюм"
+
+#: templates/products/detail-slug-cbv.html:17
+#: templates/products/update_product.html:43
+#: templates/products/update_product_test.html:14
+msgid "Update the product"
+msgstr "Буюм озгортуу "
+
+#: templates/products/detail-slug-cbv.html:18
+msgid "Delete the product"
+msgstr "Буюм жок кылуу "
+
+#: templates/products/detail-slug-cbv.html:30
+msgid "Price: "
+msgstr "Баасы: "
+
+#: templates/products/detail-slug-cbv.html:30
+msgid "som"
+msgstr "сом"
+
+#: templates/products/detail-slug-cbv.html:31
+msgid "Quаntity: "
+msgstr "Саны: "
+
+#: templates/products/detail-slug-cbv.html:31
+msgid "kg"
+msgstr "кг"
+
+#: templates/products/list-cbv.html:10 templates/products/list.html:10
+msgid "Products list"
+msgstr "Буюмдар"
+
+#: templates/products/list-cbv.html:15
+msgid "Add new product"
+msgstr "Буюм кошуу "
+
+#: templates/products/list-cbv.html:36 templates/search/index.html:42
+msgid "Page"
+msgstr "Бет"
+
+#: templates/products/list-cbv.html:36 templates/search/index.html:42
+msgid "of"
+msgstr "чейин"
+
+#: templates/products/update_product.html:4
+#: templates/products/update_product.html:10
+#: templates/products/update_product_test.html:4
+#: templates/products/update_product_test.html:10
+msgid "Update a product"
+msgstr "Буюм озгортуу "
+
+#: templates/search/index.html:10
+msgid "Search Page"
+msgstr "Издоо бетти"
+
+#: templates/search/index.html:16
+msgid "Found"
+msgstr " "
+
+#: templates/search/index.html:16
+msgid "matcning items"
+msgstr "Окшош буюмдар табылды"
+
+#: templates/search/index.html:26
+msgid "No matching items found"
+msgstr "Бир дагы окшош буюмдар табылган жок"
+
+#: templates/search/index.html:46
+msgid "next"
+msgstr "кийинки"
+
+#: templates/search/index.html:47
+msgid "last"
+msgstr "аягы"
+
+#: templates/snippets/cart-update.html:10
+msgid "Good is not in the cart."
+msgstr "Буюм корзинада жок."
+
+#: templates/snippets/cart-update.html:12
+msgid "Do want you to add it?"
+msgstr "Кошуунуз келеби?"
+
+#: templates/snippets/cart-update.html:14
+msgid "Add"
+msgstr "Кошуу"
+
+#: templates/snippets/cart-update.html:16
+msgid "Good is in the cart."
+msgstr "Буюм корзинада бар."
+
+#: templates/snippets/cart-update.html:18
+msgid "Do want you to remove it?"
+msgstr "Жок кылыныз келеби?"
+
+#: templates/snippets/search_block.html:3
+#: templates/snippets/search_block.html:4
+msgid "Search"
+msgstr "Издоо"

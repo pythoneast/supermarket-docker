@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% load static i18n %}
 {% load static %}
 {% load custom_tags %}
 {% load thumbnail %}
@@ -14,7 +15,7 @@
                     {% for c in categories %}
                     <li class="list-group-item"><a href="#">{{ c.title }}</a></li>
                     {% empty %}
-                    <li class="list-group-item">Нет категорий</li>
+                    <li class="list-group-item">{% trans 'No catigories '%}</li>
                     {% endfor %}
                 </ul>
             </div>
@@ -116,17 +117,17 @@
                       {% thumbnail product.productimage_set.first.image 150x150 crop as thumb %}
                         <img  alt="супермаркет ФРУНЗЕ" src="{{ thumb.url }}"/>
                     {% else %}
-                      <p>Нет фотографии</p>
+                      <p>{% trans 'No photo' %}</p>
                     {% endif %}
                   <div class="card-body">
                     <h5 class="card-title">{% upper_string product.title %}</h5>
                     <p class="card-text">{{ product.description|truncatewords:1 }}</p>
-                    <a href="{{ product.get_absolute_url }}" class="btn btn-primary">Посмотреть</a>
+                    <a href="{{ product.get_absolute_url }}" class="btn btn-primary">{% trans 'Watch' %}</a>
                   </div>
                 </div>
             </div>
         {% empty %}
-        <h5>Нет продуктов</h5>
+        <h5>{% trans 'No products' %}</h5>
         {% endfor %}
         </div>
         <div class="row">

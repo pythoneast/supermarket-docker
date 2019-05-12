@@ -1,3 +1,4 @@
+{% load static i18n %}
 <div class="col-12 mx-auto d-block text-center mt-3">
   <hr>
   <p>
@@ -8,7 +9,7 @@
   {% if product.productimage_set.first %}
     <img src="{{ product.productimage_set.first.image.url }}" height="100px" width="auto"/>
   {% else %}
-    <p>Нет фотографии</p>
+    <p>{% trans 'No photo' %}</p>
   {% endif %}
   <hr>
 </div>

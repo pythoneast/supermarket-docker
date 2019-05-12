@@ -1,6 +1,7 @@
 {% extends 'base.html' %}
+{% load static i18n %}
 {% load static %}
-{% block title %}Register Page{% endblock title %}
+{% block title %}{% trans 'Register Page' %}{% endblock title %}
 {% block css %}{% endblock css %}
 {% block content %}
     {% url 'register-page' as register_url %}

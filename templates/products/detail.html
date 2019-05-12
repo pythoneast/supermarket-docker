@@ -1,12 +1,12 @@
 {% extends 'base.html' %}
 {% load static %}
-{% block title %}Products detail{% endblock title %}
+{% block title %}{% trans 'Products detail' %}{% endblock title %}
 {% block css %}{% endblock css %}
 {% block content %}
     <div class="container">
       <div class="row">
           <div class="col-12">
-              <h1 class="text-center mt-5">Products detail</h1>
+              <h1 class="text-center mt-5">{% trans 'Products detail' %}</h1>
           </div>
       </div>
       <div class="row">
@@ -17,7 +17,7 @@
               {% for image in product.productimage_set.all %}
                 <img src="{{ image.image.url }}" height="100px" width="auto"/>
               {% empty %}
-                  <p>Нет фотографий</p>
+                  <p>{% trans 'No photo' %}</p>
               {% endfor %}
           </div>
       </div>

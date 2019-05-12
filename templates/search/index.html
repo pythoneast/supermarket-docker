@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% load static i18n %}
 {% load static %}
 {% block title %}Products list{% endblock title %}
 {% block css %}{% endblock css %}
@@ -6,13 +7,13 @@
   <div class="container">
     <div class="row">
       <div class="col-12">
-        <h1 class="text-center mt-5">Search Page</h1>
+        <h1 class="text-center mt-5">{% trans 'Search Page' %}</h1>
       </div>
     </div>
     <div class="row my-5 text-center">
       <div class="col-12">
         {% if object_list %}
-          <h4>Было найдено {{ object_list.paginator.count }} подходящих вариантов</h4>
+          <h4>{% trans 'Found' %} {{ object_list.paginator.count }} {% trans 'matcning items' %}</h4>
         {% else %}
           {% include 'snippets/search_block.html' %}
         {% endif %}
@@ -22,7 +23,7 @@
       {% for object in object_list %}
         {% include 'includes/cart.html' with product=object %}
       {% empty %}
-        <p>Не найдено подходящих вариантов</p>
+        <p>{% trans 'No matching items found' %}</p>
       {% endfor %}
     </div>
   </div>
@@ -38,12 +39,12 @@
               {% endif %}
 
             <span class="current">
-                  Page {{ object_list.number }} of {{ object_list.paginator.num_pages }}.
+                  {% trans 'Page' %} {{ object_list.number }} {% trans 'of' %} {{ object_list.paginator.num_pages }}.
               </span>
 
             {% if object_list.has_next %}
-              <a href="?page={{ object_list.next_page_number }}">next</a>
-              <a href="?page={{ object_list.paginator.num_pages }}">last &raquo;</a>
+              <a href="?page={{ object_list.next_page_number }}">{% trans 'next' %}</a>
+              <a href="?page={{ object_list.paginator.num_pages }}">{% trans 'last' %} &raquo;</a>
             {% endif %}
           </span>
         </div>

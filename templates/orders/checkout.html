@@ -1,5 +1,5 @@
 {% extends 'base.html' %}
-
+{% load static i18n %}
 {% block content %}
   {% if not request.user.is_authenticated and not request.session.guest_email_id %}
   <div class="container">
@@ -22,7 +22,7 @@
     {% if billing_profile.addresses.count == 0 %}
       <div class="row">
         <div class="col-12 d-block mx-auto text-center">
-          <h1>Shipping Address</h1>
+          <h1>{% trans 'Shipping Address' %}</h1>
           {% url 'address:create' as create_address_url %}
           {% include 'includes/form.html' with form=address_form action_url=create_address_url next_url=request.build_absolute_uri %}
         </div>
@@ -31,10 +31,10 @@
       <div class="row">
         <div class="col-12 d-block mx-auto text-center">
           <b>{{ order_obj.order_id }} ---  {{ cart.id }}</b>
-          <h1>Оформить заказ</h1>
-          <p>Адрес доставки: {{ order_obj.address.get_address_display }}</p>
-          <p>Сумма доставки: {{ order_obj.shipment_total }}</p>
-          <p>Сумма: {{ order_obj.total }}</p>
+          <h1>{% trans 'Checkout' %}</h1>
+          <p>{% trans 'Shipping Address:' %} {{ order_obj.address.get_address_display }}</p>
+          <p>{% trans 'Delivery Amount:' %} {{ order_obj.shipment_total }}</p>
+          <p>{% trans 'Amount:' %} {{ order_obj.total }}</p>
           {% for e in errors %}
             <p>
               {{ e }}
@@ -42,7 +42,7 @@
           {% endfor %}
           <form method="post">
             {% csrf_token %}
-            <button type="submit" class="btn btn-success">КУПИТЬ</button>
+            <button type="submit" class="btn btn-success">{% trans 'Buy' %}</button>
           </form>
         </div>
       </div>

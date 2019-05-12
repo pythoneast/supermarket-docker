@@ -1,11 +1,11 @@
 {% extends 'base.html' %}
-
+{% load static i18n %}
 {% block content %}
   <div class="container">
     <div class="row">
       <div class="col-12 my-5 text-center">
-        <h1>Покупка был успешно оформлена!</h1>
-        <a class="btn btn-primary btn-lg mt-5" href="{% url 'main-page' %}">Вернуться на главную</a>
+        <h1>{% trans 'The purchase was successfully completed!' %}</h1>
+        <a class="btn btn-primary btn-lg mt-5" href="{% url 'main-page' %}">{% trans 'Back to Main Page' %}</a>
       </div>
     </div>
   </div>

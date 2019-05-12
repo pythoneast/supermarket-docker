@@ -1,11 +1,12 @@
 {% extends 'base.html' %}
+{% load static i18n %}
 {% load static %}
     {% block title %}Contacts{% endblock title %}
     {% block content %}
         <div class="container">
             <div class="row">
                 <div class="col-12 col-sm-10 col-md-8 col-lg-6 col-xl-4 d-block mx-auto">
-                    <h1 class="text-center mt-5">Contacts</h1>
+                    <h1 class="text-center mt-5">{% trans 'Contacts' %}</h1>
                     <form method="POST" class="d-block mx-auto text-center">
                         {% csrf_token %}
                         <!--{{ contacts_form.as_ul }}-->
@@ -22,7 +23,7 @@
                             {{ contacts_form.message.errors }}
                             {{ contacts_form.message }}
                         </div>
-                        <button type="submit" class="btn btn-success">Отправить</button>
+                        <button type="submit" class="btn btn-success">{% trans 'Send' %}</button>
                     </form>
                 </div>
             </div>

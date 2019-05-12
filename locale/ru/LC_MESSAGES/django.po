@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-04-03 14:07+0000\n"
+"POT-Creation-Date: 2019-05-12 13:03+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -24,11 +24,19 @@ msgstr ""
 msgid "Order successfully completed!"
 msgstr "Заказ успешно завершен!"
 
+#: templates/account/login.html:4 templates/products/delete_product.html:3
+msgid "Login Page"
+msgstr "Страница логина"
+
+#: templates/account/register.html:4
+msgid "Register Page"
+msgstr "Регистрация"
+
 #: templates/base.html:25
 msgid "Main Page"
 msgstr "Главная"
 
-#: templates/base.html:28
+#: templates/base.html:28 templates/contacts.html:9
 msgid "Contacts"
 msgstr "Контакты"
 
@@ -51,3 +59,190 @@ msgstr "Выйти"
 #: templates/cart/cart_page.html:59
 msgid "Product name"
 msgstr "Наименование продукта"
+
+#: templates/cart/cart_page.html:60
+msgid "Price"
+msgstr "Стоимость"
+
+#: templates/cart/cart_page.html:61 templates/products/delete_product.html:18
+#: templates/snippets/cart-update.html:7 templates/snippets/cart-update.html:20
+msgid "Delete"
+msgstr "Удалить"
+
+#: templates/cart/cart_page.html:77
+msgid "Subtotal: "
+msgstr "Промежуточный итог:"
+
+#: templates/cart/cart_page.html:83
+msgid "Total: "
+msgstr "Общий итог:"
+
+#: templates/cart/cart_page.html:91 templates/orders/checkout.html:34
+msgid "Checkout"
+msgstr "Оформиь заказ"
+
+#: templates/contacts.html:26
+msgid "Send"
+msgstr "Отправить"
+
+#: templates/includes/cart.html:12 templates/index.html:120
+#: templates/products/detail-cbv.html:21
+#: templates/products/detail-slug-cbv.html:43 templates/products/detail.html:20
+#: templates/products/list.html:22
+msgid "No photo"
+msgstr "Нет фотографий"
+
+#: templates/includes/form.html:19
+msgid "Submit"
+msgstr "Оформить"
+
+#: templates/index.html:18
+msgid "No catigories "
+msgstr "Нет категорий"
+
+#: templates/index.html:125
+msgid "Watch"
+msgstr "Посмотреть"
+
+#: templates/index.html:130
+msgid "No products"
+msgstr "Нет продуктов"
+
+#: templates/orders/checkout.html:25
+msgid "Shipping Address"
+msgstr "Адрес доставки"
+
+#: templates/orders/checkout.html:35
+msgid "Shipping Address:"
+msgstr "Адрес доставки:"
+
+#: templates/orders/checkout.html:36
+msgid "Delivery Amount:"
+msgstr "Сумма доставки:"
+
+#: templates/orders/checkout.html:37
+msgid "Amount:"
+msgstr "Сумма:"
+
+#: templates/orders/checkout.html:45
+msgid "Buy"
+msgstr "Купить"
+
+#: templates/orders/success.html:7
+msgid "The purchase was successfully completed!"
+msgstr "Покупка успешно завершен!"
+
+#: templates/orders/success.html:8
+msgid "Back to Main Page"
+msgstr "Вернуться на Главнкю"
+
+#: templates/products/create_product.html:4
+#: templates/products/create_product.html:10
+#: templates/products/create_product.html:43
+msgid "Create Product"
+msgstr "Создать продукт"
+
+#: templates/products/detail-cbv.html:4 templates/products/detail-cbv.html:10
+#: templates/products/detail-slug-cbv.html:4
+#: templates/products/detail-slug-cbv.html:10 templates/products/detail.html:3
+#: templates/products/detail.html:9
+msgid "Products detail"
+msgstr "Продукт"
+
+#: templates/products/detail-slug-cbv.html:17
+#: templates/products/update_product.html:43
+#: templates/products/update_product_test.html:14
+msgid "Update the product"
+msgstr "Обновить продукт"
+
+#: templates/products/detail-slug-cbv.html:18
+msgid "Delete the product"
+msgstr "Удалить продукт"
+
+#: templates/products/detail-slug-cbv.html:30
+msgid "Price: "
+msgstr "Стоимость: "
+
+#: templates/products/detail-slug-cbv.html:30
+msgid "som"
+msgstr "сом"
+
+#: templates/products/detail-slug-cbv.html:31
+msgid "Quаntity: "
+msgstr "Колчество: "
+
+#: templates/products/detail-slug-cbv.html:31
+msgid "kg"
+msgstr "кг"
+
+#: templates/products/list-cbv.html:10 templates/products/list.html:10
+msgid "Products list"
+msgstr "Продукты"
+
+#: templates/products/list-cbv.html:15
+msgid "Add new product"
+msgstr "Добавить продукт"
+
+#: templates/products/list-cbv.html:36 templates/search/index.html:42
+msgid "Page"
+msgstr "Страница"
+
+#: templates/products/list-cbv.html:36 templates/search/index.html:42
+msgid "of"
+msgstr "из"
+
+#: templates/products/update_product.html:4
+#: templates/products/update_product.html:10
+#: templates/products/update_product_test.html:4
+#: templates/products/update_product_test.html:10
+msgid "Update a product"
+msgstr "Обновить продукт"
+
+#: templates/search/index.html:10
+msgid "Search Page"
+msgstr "Страница поиска"
+
+#: templates/search/index.html:16
+msgid "Found"
+msgstr "Было найдено"
+
+#: templates/search/index.html:16
+msgid "matcning items"
+msgstr "подходящих вариантов"
+
+#: templates/search/index.html:26
+msgid "No matching items found"
+msgstr "Не найдено подходящих вариантов"
+
+#: templates/search/index.html:46
+msgid "next"
+msgstr "следующий"
+
+#: templates/search/index.html:47
+msgid "last"
+msgstr "последний"
+
+#: templates/snippets/cart-update.html:10
+msgid "Good is not in the cart."
+msgstr "Товара нет в корзине."
+
+#: templates/snippets/cart-update.html:12
+msgid "Do want you to add it?"
+msgstr "Не хотите добавить?"
+
+#: templates/snippets/cart-update.html:14
+msgid "Add"
+msgstr "Добавить"
+
+#: templates/snippets/cart-update.html:16
+msgid "Good is in the cart."
+msgstr "Товар есть в корзине."
+
+#: templates/snippets/cart-update.html:18
+msgid "Do want you to remove it?"
+msgstr "Не хотите удалить?"
+
+#: templates/snippets/search_block.html:3
+#: templates/snippets/search_block.html:4
+msgid "Search"
+msgstr "Искать"

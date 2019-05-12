@@ -1,4 +1,5 @@
+{% load static i18n %}
 <form class="form-inline" method="get" action="{% url 'search:search-page' %}">
-  <input name="q" class="form-control font-weight-bold" type="search" placeholder="Search" {% if request.GET.q %}value="{{ request.GET.q }}"{% endif %}>
-  <button class="btn btn-danger font-weight-bold" type="submit">Search</button>
+  <input name="q" class="form-control font-weight-bold" type="search" placeholder="{% trans 'Search' %}" {% if request.GET.q %}value="{{ request.GET.q }}"{% endif %}>
+  <button class="btn btn-danger font-weight-bold" type="submit">{% trans 'Search' %}</button>
 </form>

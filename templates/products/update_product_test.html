@@ -1,16 +1,17 @@
 {% extends 'base.html' %}
 {% load static %}
-{% block title %}Изменение продукта{% endblock title %}
+{% load static i18n %}
+{% block title %}{% trans 'Update a product' %}{% endblock title %}
 {% block css %}{% endblock css %}
 {% block content %}
     <div class="container mt-5">
         <div class="row">
             <div class="col-12 col-sm-10 col-lg-6 d-block mx-auto">
-                <h1 class="text-center">Изменение продукта</h1>
+                <h1 class="text-center">{% trans 'Update a product' %}</h1>
                 <form method="post">
                     {% csrf_token %}
                     {{ form.as_p }}
-                    <button type="submit" class="btn btn-success d-block mx-auto">Update the product</button>
+                    <button type="submit" class="btn btn-success d-block mx-auto">{% trans 'Update the product' %}</button>
                 </form>
             </div>
         </div>

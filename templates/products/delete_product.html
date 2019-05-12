@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
 {% load static %}
-{% block title %}Login Page{% endblock title %}
+{% block title %}{% trans 'Login Page' %}{% endblock title %}
 {% block css %}{% endblock css %}
 {% block content %}
     <div class="container mt-5">
@@ -15,7 +15,7 @@
                     {% for form in formset.forms %}
                         {{ form.as_p }}
                     {% endfor %}
-                    <button type="submit" class="btn btn-danger">Delete</button>
+                    <button type="submit" class="btn btn-danger">{% trans 'Delete' %}</button>
                 </form>
             </div>
         </div>

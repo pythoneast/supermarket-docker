@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-04-03 14:07+0000\n"
+"POT-Creation-Date: 2019-05-12 10:10+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -25,7 +25,7 @@ msgstr "Буйрутмыныз муваппәқийәтлик билән өтт�
 msgid "Main Page"
 msgstr "Баш варак"
 
-#: templates/base.html:28
+#: templates/base.html:28 templates/contacts.html:9
 msgid "Contacts"
 msgstr "Контактс"
 
@@ -48,3 +48,7 @@ msgstr "Логаут"
 #: templates/cart/cart_page.html:59
 msgid "Product name"
 msgstr "Рәхтнин исми"
+
+#: templates/contacts.html:26
+msgid "Send"
+msgstr ""

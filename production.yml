@@ -5,9 +5,9 @@ services:
     restart: always
     image: nginx:latest
     expose:
-      - 8080
+      - 9000
     ports:
-      - "80:8080"
+      - "9000:9000"
     volumes:
       - static:/app/static
       - media:/app/media
@@ -38,10 +38,10 @@ services:
         bash -c "python3.6 manage.py migrate
         && python3.6 manage.py collectstatic --noinput
         && python3.6 manage.py compilemessages
-        && gunicorn -c gunicorn.py supermarket.wsgi -w 2 -b :8000"
+        && gunicorn -c gunicorn.py supermarket.wsgi -w 2 -b :9991"
 
     ports:
-      - "8000:8000"
+      - "9000:9000"
     depends_on:
       - db
       - redis
@@ -60,4 +60,3 @@ volumes:
         driver: local
     static:
     media:
-
