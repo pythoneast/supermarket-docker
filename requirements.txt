@@ -3,7 +3,7 @@ backcall==0.1.0
 billiard==3.5.0.5
 celery==4.2.2
 decorator==4.3.2
-Django==2.1.10
+Django==2.2.24
 django-environ==0.4.5
 easy-thumbnails==2.6
 gevent
